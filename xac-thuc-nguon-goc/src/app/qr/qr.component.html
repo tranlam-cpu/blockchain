@@ -1,0 +1,123 @@
+<div class="main d-flex flex-row">
+	<div class="main-nav">
+		<nav class="nav flex-column" >
+		  <a class="nav-item nav-link" routerLink="/farm">
+		  	<div class="bd-brand-item w-100 px-2 pt-5 pb-3">
+			    <div class="h3">Farm Check</div>
+			    <strong class="text-success">truy xuất nguồn gốc</strong>
+			</div>
+		  </a>
+		  <a class="nav-item nav-link" routerLink="#" (click)="goBack()">
+		  	<div class="bd-brand-item w-100 px-2">
+			    <strong class="text-danger"><i class="fa-solid fa-circle-arrow-left"></i> quay lại danh mục</strong>
+			</div>
+		  </a>
+		  <hr width="100%">
+		  <div class="bd-brand-item w-100 px-4 py-4">
+			    <h5>Danh mục QR</h5>
+		  </div>
+		  
+		</nav>
+	</div>
+	<div class="main-content d-flex align-items-start flex-column justify-content-between">
+		<header class="d-flex flex-row justify-content-between pt-3">
+			<div class="nav-left ms-3 d-flex flex-row justify-content-between">
+				<div><i class="fa-solid fa-house"></i></div>
+				<div>website</div>
+				<div><i class="fa-solid fa-code"></i></div>
+			</div>
+
+			<div class="input-group search d-flex align-items-start">
+			  <span class="input-group-text"><i class="fa-solid fa-magnifying-glass"></i></span>
+			  <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+			</div>
+
+			<div class="me-3 d-flex flex-row">
+				<div>
+					<i class="fa-solid fa-bell me-5">
+					  <span class="ring position-absolute top-2 start-110 translate-middle badge rounded-pill bg-danger">
+					    99+
+					    <span class="visually-hidden"></span>
+					  </span>
+					</i>
+				</div>
+
+				<div>
+					<button type="button" class="btn-logout btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover" (click)="setLogout()">
+					  logout
+					</button>
+				</div>
+			</div>
+		</header>
+
+		<content>
+		
+		<div class="QR">
+			🌺Đến nay, việc ứng dụng công nghệ thông tin vào hoạt động quản lý, giám sát của cơ quan quản lý nhà nước đã có được những kết quả nhất định, bước đầu tạo được nền tảng về nhận thức và hạ tầng công nghệ thông tin cho việc phát triển ứng dụng trong các giai đoạn tiếp theo.🤖🤖🤖🤖
+			
+		</div>
+
+		<div class="QR">
+			<h5>Thông tin cơ bản</h5>
+			<hr>
+			<div>
+				Mã QR xác thực thông tin sản phẩm
+			</div>
+			<div class="info mt-3 d-flex flex-row">
+				<div class="QR-code">
+					<qr-code [value]="qrInfo" [size]="200"></qr-code>
+				</div>
+				<div class="QR-button d-flex flex-column justify-content-between">
+					<button class="btn btn-success"><a routerLink="/qr-check"><i class="fa-solid fa-magnifying-glass"></i> Tra cứu</a></button>
+					<button class="btn btn-success"><i class="fa-solid fa-download"></i> Tải xuống</button>
+					<button class="btn btn-success"><i class="fa-solid fa-print"></i> inh mã</button>
+				</div>
+				<div class="me-5">
+					<img src="http://localhost:5000/images/{{img}}" width="300px" height="200px">
+				</div>
+				<div class="ms-3">
+					<div class="d-flex flex-column justify-content-between">
+						<div class="input-group mb-3">
+						  <div class="input-group-text">
+						    ✅
+						  </div>
+						  <input type="text" value="{{name}}" class="form-control" aria-label="Text input with checkbox" disabled>
+						</div>
+
+						<div class="input-group mb-3">
+						  <div class="input-group-text">
+						    ✅
+						  </div>
+						  <input type="text" value="{{content}}" class="form-control" aria-label="Text input with checkbox" disabled>
+						</div>
+
+						<div class="input-group mb-3">
+						  <div class="input-group-text">
+						    ✅
+						  </div>
+						  <input type="text" value="{{money}}" class="form-control" aria-label="Text input with checkbox" disabled>
+						</div>
+
+						<div class="input-group mb-3">
+						  <div class="input-group-text">
+						    ✅
+						  </div>
+						  <input type="text" value="{{company}}" class="form-control" aria-label="Text input with checkbox" disabled>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="ps-3 small text-muted">
+				Thông tin lưu hành nội bộ
+			</div>
+		</div>
+		
+		
+		</content>
+
+		<footer class="ft text-muted">
+			☘️☘️ Trần Lâm - Trầm Hoàng Nhân - Nguyễn Hoàng Trân ☘️☘️
+		</footer>
+	</div>
+</div>
+

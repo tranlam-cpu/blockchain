@@ -1,0 +1,29 @@
+<nav class="navbar style-form">
+	<input type="text" class="form-control" name="name" [(ngModel)]="name" (ngModelChange)="Search()" placeholder="tìm kiếm tên sản phẩm..">
+</nav>
+<table class="table style-form">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Tên sản phẩm</th>
+      <th scope="col">Công ty</th>
+      <th scope="col">Nội dung</th>
+      <th scope="col">Số tiền</th>
+ 	  <th scope="col">thumbnail</th>
+ 	  <th scope="col">Xem chi tiết</th>
+    </tr>
+  </thead>
+  <tbody *ngFor= "let farm of farms | paginate:{itemsPerPage:8,currentPage:p};let i=index">   
+    <tr>
+      <th scope="row">{{i}}</th>
+      <td>{{farm.name}}</td>
+      <td>{{farm.company}}</td>
+      <td>{{farm.content}}</td>
+      <td>{{farm.money}}</td>
+      <td><img [src]="'http://localhost:5000/images/'+farm.thumbnail" width="100px"></td>
+      <td (click)="handleLinkDetail(farm.name,farm.company,farm.content,farm.money,farm.thumbnail,farm.QR)">xem chi tiết</td>   
+    </tr>
+    
+  </tbody>
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</table>

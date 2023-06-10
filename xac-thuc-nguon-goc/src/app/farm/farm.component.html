@@ -1,0 +1,87 @@
+<div class="main d-flex flex-row">
+	<div class="main-nav">
+		<nav class="nav flex-column" >
+		  <a class="nav-item nav-link" routerLink="/farm">
+		  	<div class="bd-brand-item w-100 px-2 pt-5 pb-3">
+			    <div class="h3">Farm Check</div>
+			    <strong class="text-success">truy xuất nguồn gốc</strong>
+			</div>
+		  </a>
+		  <a class="nav-item nav-link" routerLink="#" (click)="goBack()">
+		  	<div class="bd-brand-item w-100 px-2">
+			    <strong class="text-danger"><i class="fa-solid fa-circle-arrow-left"></i> quay lại danh mục</strong>
+			</div>
+		  </a>
+		  <hr width="100%">
+		  <div class="bd-brand-item w-100 px-4 py-4">
+			    <h5>Danh mục QR</h5>
+		  </div>
+		  <a class="nav-item nav-link" (click)="showForm = false; showList = true">
+		  	<div class="bd-brand-item w-100 px-2">
+			    danh mục nông sản
+			</div>
+		  </a>
+		  <a class="nav-item nav-link" (click)="showForm = true; showList = false">
+		  	<div class="bd-brand-item w-100 px-2">
+			    thêm nông sản
+			</div>
+		  </a>
+		</nav>
+	</div>
+	<div class="main-content d-flex align-items-start flex-column justify-content-between">
+		<header class="d-flex flex-row justify-content-between pt-3">
+			<div class="nav-left ms-3 d-flex flex-row justify-content-between">
+				<div><i class="fa-solid fa-house"></i></div>
+				<div>website</div>
+				<div><i class="fa-solid fa-code"></i></div>
+			</div>
+
+			<div class="input-group search d-flex align-items-start">
+			  <span class="input-group-text"><i class="fa-solid fa-magnifying-glass"></i></span>
+			  <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+			</div>
+
+			<div class="me-3 d-flex flex-row">
+				<div>
+					<i class="fa-solid fa-bell me-5">
+					  <span class="ring position-absolute top-2 start-110 translate-middle badge rounded-pill bg-danger">
+					    99+
+					    <span class="visually-hidden"></span>
+					  </span>
+					</i>
+				</div>
+
+				<div>
+					<button type="button" class="btn-logout btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover" (click)="setLogout()">
+					  logout
+					</button>
+				</div>
+			</div>
+		</header>
+
+		<content>
+			<app-farm-create
+			*ngIf="showForm"
+			(farmCreated)="handleFarmCreate($event)"
+			></app-farm-create>
+			<div *ngIf="showList" class="farm-list">
+				<app-farm-list	
+				*ngFor="let farm of farms | async"
+				[id]="farm.id"
+			    [name]="farm.name" 
+			    [thumbnail]="farm.thumbnail" 
+			    [company]="farm.company"
+			    [content]="farm.content"
+			    [money]="farm.money"
+			    [active]="farm.active"
+			    [wallet]="farm.wallet"
+				></app-farm-list>
+			</div>
+
+		</content>
+
+		<footer class="ft text-muted">
+			☘️☘️ Trần Lâm - Trầm Hoàng Nhân - Nguyễn Hoàng Trân ☘️☘️
+		</footer>
+	</div>
+</div>

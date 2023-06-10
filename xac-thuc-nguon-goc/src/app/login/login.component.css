@@ -1,0 +1,36 @@
+.login-main{
+	height: 753px;
+}
+.login-form{
+	width: 40%;
+    box-shadow: 7px 0 5px -2px gainsboro;
+}
+.login-background{
+	width: 60%;
+}
+
+.input-group-text{
+	background: white;
+	
+}
+
+.form-floating input{
+	border-left: none;
+}
+
+.login-logo i{
+	font-size: 70px;
+}
+
+.login-logo span{
+	margin-left: 1em;
+	color: #477662;
+	font-family: cursive;
+	font-weight: bolder;
+	font-size: 30px;
+}
+
+.btn-login{
+	background: #477662;
+	border: none;
+}

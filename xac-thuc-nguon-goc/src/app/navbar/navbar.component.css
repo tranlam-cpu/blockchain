@@ -1,0 +1,26 @@
+.navbar{
+	height: 70px;
+	box-shadow: 0px 7px 10px -2px gainsboro;
+}
+
+.login-logo span{
+	margin-left: 0.5em;
+	color: #477662;
+	font-family: cursive;
+	font-weight: bolder;
+	font-size: 20px;
+}
+
+.nav-right > div > i{
+	color: #477662;
+	
+}
+.nav-right div{
+	margin-left: 0.5em;
+}
+.nav-right > div > span{
+	cursor: pointer;
+	font-weight: bolder;
+	color: #477662;
+	margin-right: 0.5em;
+}

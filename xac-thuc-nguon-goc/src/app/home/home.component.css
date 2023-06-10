@@ -1,0 +1,26 @@
+.home-content{
+	margin-top: 4em;
+	display: grid;
+	grid-template-columns: auto auto auto;
+	justify-content: space-evenly;
+}
+
+.home-content div{
+	box-shadow: 7px 7px 10px -2px gainsboro;
+	cursor: pointer;
+	height: 350px;
+}
+
+.card img{
+	object-fit: cover;
+	height: 200px;
+}
+
+.home-content div:hover{
+	border: none;
+}
+
+a{
+	text-decoration: none;
+	color: black;
+}

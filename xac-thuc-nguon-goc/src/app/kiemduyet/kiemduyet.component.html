@@ -1,0 +1,34 @@
+<app-navbar></app-navbar>
+<nav class="navbar">
+	<input type="text" class="form-control" name="name" [(ngModel)]="name" (ngModelChange)="Search()" placeholder="tìm kiếm tên sản phẩm..">
+</nav>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Tên sản phẩm</th>
+      <th scope="col">Công ty</th>
+      <th scope="col">Nội dung</th>
+      <th scope="col">Số tiền</th>
+      <th scope="col">Trạng thái</th>
+      <th scope="col">Kiểm duyệt</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor= "let farm of farms | paginate:{itemsPerPage:8,currentPage:p};let i=index">
+      <th scope="row">{{i}}</th>
+      <td>{{farm.name}}</td>
+      <td>{{farm.company}}</td>
+      <td>{{farm.content}}</td>
+      <td>{{farm.money}}</td>
+      <td *ngIf="farm.active == true"><span class="alert alert-success">đã kiểm duyệt</span></td>
+      <td *ngIf="farm.active == false"><span class="alert alert-warning">chưa kiểm duyệt</span></td>
+      <td>
+      	<button class="btn btn-success" (click)="submitForm(farm.id)" [disabled]="farm.active == true">Kiểm duyệt</button>
+      </td>
+    </tr>
+    
+  </tbody>
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</table>
+

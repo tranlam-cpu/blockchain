@@ -1,0 +1,21 @@
+
+<div class="card mb-4" *ngIf="getActive()">
+	<div class="farm-image">
+		<img [src]="'http://localhost:5000/images/'+thumbnail" />
+	</div>
+	<div class="card-body">
+		<p class="card-text text-truncate font-weight-bold">
+			{{ name }}
+		</p>
+		<div class="d-flex flex-column">
+			<small class="text-muted">{{ content }}</small>
+			<small class="text-muted">{{ company }}</small>
+			<small class="text-muted">{{ money }}</small>
+			<small (click)="handleLinkDetail()">xem chi tiết</small>
+				
+		</div>		
+	</div>
+	<div class="text-end mb-3">
+		<small *ngIf="handleButton()" (click)="buy(wallet,money,id)"  class="badge bg-success">Mua</small>
+	</div>
+</div>

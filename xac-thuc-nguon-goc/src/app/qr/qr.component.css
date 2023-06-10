@@ -1,0 +1,101 @@
+.main{
+	height: 753px;
+}
+.main-nav{
+	width: 15%;
+	box-shadow: 4px 0 5px -2px gainsboro;
+}
+.main-content{
+	height: 100%;
+	width: 85%;
+	overflow-y: auto;
+}
+
+.main-content header{
+	width: 100%;
+	height: 50px;
+}
+
+.main-content content{
+	background: #f8f1ff;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.main-content footer{
+	
+	width: 100%;
+	height: 50px;
+}
+a{
+	color: black;
+}
+.QR{
+	margin: 1em;
+	padding: 1em;
+	border-radius: 10px;
+	background: white;
+	width: auto;
+}
+.QR > h5{
+	color: #477662;
+	margin-left: 1em;
+}
+.QR > hr{
+	border-bottom: 3px solid #477662;
+	border-radius: 20px;
+	width: 200px;
+}
+.QR-code{
+	margin-right: 0.7em;
+}
+.QR-button{
+	width: 150px;
+	margin-right: 5em;
+}
+.QR-button button{
+	height: 40px;
+}
+.QR-button button a{
+	text-decoration: none;
+	color: white;
+}
+
+
+
+/*---------------------*/
+.notifi-btn{
+	border-radius: 20%;
+	height: 20px;
+	width: 20px;
+}
+.ring{
+	right: 80px;
+}
+.btn-logout{
+	z-index: 100;
+	margin-top: -10px;
+}
+.nav-left{
+	padding-top: 4px;
+	margin-top: -10px;
+	margin-bottom: 4px;
+	background: gainsboro;
+	border-radius: 5px;
+	width: 200px;
+}
+.search{
+	margin-top: -12px;
+	width: 500px;
+	margin-right: 400px;
+}
+.search > span{
+	height: 38px;
+	background: white;
+}
+.ft{
+	padding-top: 10px;
+	text-align: center;
+}

@@ -1,0 +1,10 @@
+.container{
+	width: 800px;
+}
+.style-form{
+	margin: 1em;
+	padding: 1em;
+	border-radius: 10px;
+	background: white;
+	width: auto;
+}

@@ -1,0 +1,40 @@
+<div class="login-main d-flex w-100">
+	<div class="login-form d-flex align-items-center justify-content-center">
+		<div class="w-75">
+			<div class="login-logo mb-5 text-center w-100">
+				<i class="fa-solid fa-tractor fa-bounce fa-2xl" style="color: #429a7f;"></i>
+				<span>Farm Check</span>
+			</div>
+			<form [formGroup]="loginForm" (ngSubmit)="handleSubmit()">
+
+				<div class="input-group mb-3">
+				  <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
+				  <div class="form-floating">
+				    <input formControlName="user" type="text" name="user" class="form-control" id="floatingInputGroup1" placeholder="Username">
+				    <label for="floatingInputGroup1">Tài khoản</label>
+				  </div>
+				</div>
+				
+				<div class="input-group mb-3">
+				  <span class="input-group-text"><i class="fa-solid fa-key"></i></span>
+				  <div class="form-floating">
+				    <input formControlName="password" type="password" name="password" class="form-control" id="floatingInputGroup2" placeholder="password">
+				    <label for="floatingInputGroup2">Mật khẩu</label>
+				  </div>
+				</div>
+
+
+				<div class="d-flex justify-content-center">
+					<button type="submit" class="btn-login btn btn-primary w-100">Đăng nhập</button>
+				</div>
+				
+			</form>
+		</div>
+	</div>
+	<div class="login-background d-flex flex-column align-items-center justify-content-center">
+		<div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg7lt5cf_WPy2VlsgLHCMt1Y0D0AcOEukK2g&usqp=CAU"></div>
+		<div class="fw-bolder mt-4">Minh bạch thông tin</div>
+		<div class="text-muted">truy xuất rõ ràng nguồn gốc của sản phẩm củng như</div>
+		<div class="text-muted">thông tin các doanh nghiệp và nguồn gốc xuất xứ của sản phẩm</div>
+	</div>
+</div>

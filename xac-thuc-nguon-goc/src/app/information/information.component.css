@@ -1,0 +1,11 @@
+ ul{
+        padding: 20px;
+        background: rgb(97, 243, 97);
+    }
+   img{
+    width: 80%;
+   }
+   .right{
+    border: 1px solid #ccc;
+    margin: 20px;
+   }
